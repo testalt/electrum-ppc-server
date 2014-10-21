@@ -1,33 +1,33 @@
 from setuptools import setup
 
 setup(
-    name="electrum-server",
+    name="electrum-ixc-server",
     version="0.9",
-    scripts=['run_electrum_server','electrum-server'],
+    scripts=['run_electrum_ixc_server','electrum-ixc-server'],
     install_requires=['plyvel','jsonrpclib', 'irc'],
     package_dir={
-        'electrumserver':'src'
+        'electrumixcserver':'src'
         },
     py_modules=[
-        'electrumserver.__init__',
-        'electrumserver.utils',
-        'electrumserver.storage',
-        'electrumserver.deserialize',
-        'electrumserver.networks',
-        'electrumserver.blockchain_processor',
-        'electrumserver.server_processor',
-        'electrumserver.processor',
-        'electrumserver.version',
-        'electrumserver.ircthread',
-        'electrumserver.stratum_tcp',
-        'electrumserver.stratum_http'
+        'electrumixcserver.__init__',
+        'electrumixcserver.utils',
+        'electrumixcserver.storage',
+        'electrumixcserver.deserialize',
+        'electrumixcserver.networks',
+        'electrumixcserver.blockchain_processor',
+        'electrumixcserver.server_processor',
+        'electrumixcserver.processor',
+        'electrumixcserver.version',
+        'electrumixcserver.ircthread',
+        'electrumixcserver.stratum_tcp',
+        'electrumixcserver.stratum_http'
     ],
-    description="Bitcoin Electrum Server",
+    description="Ixcoin Electrum Server",
     author="Thomas Voegtlin",
     author_email="thomasv1@gmx.de",
     license="GNU Affero GPLv3",
-    url="https://github.com/spesmilo/electrum-server/",
-    long_description="""Server for the Electrum Lightweight Bitcoin Wallet"""
+    url="https://github.com/ixcoin123/electrum-server/",
+    long_description="""Server for the Electrum Lightweight Ixcoin Wallet"""
 )
 
 

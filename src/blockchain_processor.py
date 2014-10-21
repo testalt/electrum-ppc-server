@@ -81,7 +81,7 @@ class BlockchainProcessor(Processor):
         while not self.shared.stopped():
             self.main_iteration()
             if self.shared.paused():
-                print_log("bitcoind is responding")
+                print_log("ixcoind is responding")
                 self.shared.unpause()
             time.sleep(10)
 
@@ -109,7 +109,7 @@ class BlockchainProcessor(Processor):
                 respdata = urllib.urlopen(self.bitcoind_url, postdata).read()
                 break
             except:
-                print_log("cannot reach bitcoind...")
+                print_log("cannot reach ixcoind...")
                 self.shared.pause()
                 time.sleep(10)
                 if self.shared.stopped():
@@ -579,7 +579,7 @@ class BlockchainProcessor(Processor):
         try:
             respdata = urllib.urlopen(self.bitcoind_url, postdata).read()
         except:
-            logger.error("bitcoind error (getfullblock)",exc_info=True)
+            logger.error("ixcoind error (getfullblock)",exc_info=True)
             self.shared.stop()
 
         r = loads(respdata)
@@ -587,7 +587,7 @@ class BlockchainProcessor(Processor):
         for ir in r:
             if ir['error'] is not None:
                 self.shared.stop()
-                print_log("Error: make sure you run bitcoind with txindex=1; use -reindex if needed.")
+                print_log("Error: make sure you run ixcoind with txindex=1; use -reindex if needed.")
                 raise BaseException(ir['error'])
             rawtxdata.append(ir['result'])
         block['tx'] = rawtxdata
