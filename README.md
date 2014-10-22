@@ -1,5 +1,5 @@
-Electrum-server for the Electrum client
-=========================================
+Electrum-IXC-server for the Electrum-IXC client
+===============================================
 
   * Author: Thomas Voegtlin (ThomasV on the bitcointalk forum)
   * Language: Python
@@ -27,13 +27,13 @@ Installation
   1. To install and run a server, see INSTALL. For greater
      detail on the installation process, see HOWTO.md.
 
-  2. To start and stop the server, use the 'electrum-server' script
+  2. To start and stop the server, use the 'electrum-ixc-server' script
 
 
 
 License
 -------
 
-Electrum-server is made available under the terms of the [GNU Affero General
+Electrum-IXC-server is made available under the terms of the [GNU Affero General
 Public License](http://www.gnu.org/licenses/agpl.html), version 3. See the 
 included `LICENSE` for more details.
