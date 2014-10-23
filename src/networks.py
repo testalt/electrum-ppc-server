@@ -12,7 +12,7 @@ params = {
         'genesis_hash': '000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943'
     },
     'ixcoin_main': {
-        'pubkey_address': 0,
+        'pubkey_address': 138,
         'script_address': 5,
         'genesis_hash': '0000000001534ef8893b025b9c1da67250285e35c9f76cae36a4904fdf72c591'
     }
