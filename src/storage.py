@@ -9,7 +9,7 @@ from utils import bc_address_to_hash_160, hash_160_to_pubkey_address, hex_to_int
 
 global GENESIS_HASH
 
-GENESIS_HASH = '0000000001534ef8893b025b9c1da67250285e35c9f76cae36a4904fdf72c591'
+GENESIS_HASH = '00000000000be4e024af5071ba515c7510767f42ec9e40c5fba56775ff296658'
 
 """
 Patricia tree for hashing unspents
@@ -106,7 +106,7 @@ class Storage(object):
     def listunspent(self, addr):
         key = self.address_to_key(addr)
         if key is None:
-            raise BaseException('Invalid Ixcoin address', addr)
+            raise BaseException('Invalid Peercoin address', addr)
 
         out = []
         for k, v in self.db_utxo.iterator(start=key):
